@@ -60,10 +60,15 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "rxvt-unicode", NULL };
 /* custom commands */
-static const char *upvol[]   = { "amixer", "set", "Master", "2+", NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL };
-static const char *maxvol[]  = { "pactl", "set-sink-volume", "0", "150%", NULL };
-static const char *minvol[]  = { "amixer", "set", "Master", "0%", NULL };
+static const char *upvol[]   = { "amixer", "set", "Master", "2+", NULL }; /* Increases volume */
+static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL }; /* Decreases volume */
+static const char *maxvol[]  = { "pactl", "set-sink-volume", "0", "150%", NULL }; /*Maxes volume*/
+static const char *minvol[]  = { "amixer", "set", "Master", "0%", NULL }; /* Mutes volume*/
+/* i3 like keybindings
+   Win + D = dmenu              Win + Enter = Terminal            Windows + Shift + E = Exit
+   Win + Z = Volume Down        Win + Shift + Z = Mute            Windows + Shift + Q = Close Program
+   Win + X = Volume Up          Win + Shift + X = Volume Maximum  
+*/
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
