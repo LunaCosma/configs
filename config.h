@@ -65,9 +65,12 @@ static const char *downvol[] = { "amixer", "set", "Master", "2-", NULL }; /* Dec
 static const char *maxvol[]  = { "pactl", "set-sink-volume", "0", "150%", NULL }; /*Maxes volume*/
 static const char *minvol[]  = { "amixer", "set", "Master", "0%", NULL }; /* Mutes volume*/
 /* i3 like keybindings
-   Win + D = dmenu              Win + Enter = Terminal            Windows + Shift + E = Exit
-   Win + Z = Volume Down        Win + Shift + Z = Mute            Windows + Shift + Q = Close Program
+   Win + D = dmenu              Win + Enter = Terminal            Win + Shift + E = Exit
+   Win + Z = Volume Down        Win + Shift + Z = Mute            Win + Shift + Q = Close Program
    Win + X = Volume Up          Win + Shift + X = Volume Maximum  
+   Win + B = Toggle Bar         Win + H = Focus Left              Win + L = Focus Right
+   Win + F = Set Layout (Float) Win + T = Set Layout (Tile)       Win + M = Set Layout (Fullscreen)
+   Win + Shift + Space = Toggle Floating
 */
 
 static Key keys[] = {
