@@ -1,0 +1,10 @@
+#Utility aliases
+alias vol='amixer sset Master'
+alias mu='youtube-dl --extract-audio --audio-format mp3'
+alias tor='cd tor-browser_en-US; ./start-tor-browser.desktop'
+alias please='sudo !!'
+alias bye='shutdown now'
+alias xrecord='ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0+0,0 output.mp4'
+alias listaliases='cat -n ~/.bash_aliases'
+alias vim='nvim'
+alias nfetch='~/neofetch/neofetch --w3m --source /home/user/Pictures/.img/Pic/Anime/Madoka/Homura/115\ HomuThread\ 67.jpg'
