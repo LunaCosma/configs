@@ -22,7 +22,9 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "Internet", "Terminal", "Music", "4", "5", "6", "7", "8", "9" };
+/*Internet, Terminal, Music, Book, Game*/
+static const char *tags[] = { "🌎", "💻", "🎧", "📕", "🍀", "6", "7", "8", "9" };
+
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -30,8 +32,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Gimp",        NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",     NULL,       NULL,       1 << 8,       0,           -1 },
+        { "qutebrowser", NULL,       NULL,       1,            0,           -1 },
+        { "Zathura",     NULL,       NULL,       1 << 3,       0,           -1 },
+        { "Tor Browser", NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
